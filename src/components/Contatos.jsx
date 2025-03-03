@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import {useInView} from "react-intersection-observer";
+import {useInView} from "react-intersection-observer"; 
+import {useLanguage} from "./LanguageContext";
 
 const ContentContainer = styled.div`
 
@@ -42,12 +43,14 @@ const Contatos = () => {
         threshold: 0.5,
     })
 
+    const {t} = useLanguage();
+
     return(
         <ContentContainer id="contatos">
 
             <div ref={ref}>
                 <Content className={inView ? "in-view" : ""}>
-                    <h1>Contatos</h1>
+                    <h1>{t.contacts}</h1>
                 </Content>
             </div>
 

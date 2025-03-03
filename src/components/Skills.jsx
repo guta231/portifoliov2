@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {useInView} from "react-intersection-observer";
+import {useLanguage} from "./LanguageContext";
 
 const SkillContainer = styled.div`  
     display: flex;
@@ -37,12 +38,12 @@ const Skills = () => {
         threshold: 0.5,
     })
 
-
+    const {t} = useLanguage();
 
     return(
         <SkillContainer id="skills" ref={ref} className={inView ? "in-view" : ""}>
             <ContentSkill>
-                <h1>Habilidades</h1>
+                <h1>{t.skills}</h1>
             </ContentSkill>
         </SkillContainer>
     )

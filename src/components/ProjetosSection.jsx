@@ -17,9 +17,9 @@ const ProjetosContainer = styled.section`
 const Projeto = styled.div`
     opacity: 0;
     display: flex;
+    padding: 10vh;
     justify-content: center;
-    gap: 10vw;
-    margin-top: 20vh;
+   
     transition: opacity .7s ease-in-out;
 
     &.in-view {
@@ -84,10 +84,12 @@ const Projeto = styled.div`
     }
 
     @media (max-width: 1283px) {
+            padding: 20vh;
         .container {
             display: block;
             height: 30vh;
             margin-bottom: 30vh;
+            
         }
 
         h1 {
@@ -179,9 +181,7 @@ const ProjetosSection = () => {
                         ))}
                     </div>
                     <h1>AlgaTech</h1>
-                    <fieldset><p>Projeto desenvolvido para a Global Solution - 2º semestre de 2024, com o tema "Green Energy - energia limpa para um futuro mais sustentável", em parceria com empresas como SAP, Ultragaz e Pacto Global.<br/><br/>Geração de energia solar: para garantir a autossustentabilidade do sistema;
-IoT (Internet of Things): para comunicação e monitoramento das microalgas;
-Eletrofloculação: para otimizar o processo de coleta das algas.<br/><br/><Link to="https://www.linkedin.com/posts/gustavo-henrique-a4aa762b1_videopitch-algatech-activity-7265944145171472384-1B6e?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsWLVoB8GcNpElM93jRzecehyM0KocCwPE" target="_blank" className="saiba_mais">Saiba mais</Link></p></fieldset>
+                    <fieldset><p>{t.algatech_p1}<br/><br/>{t.algatech_p2}<br/><br/><Link to="https://www.linkedin.com/posts/gustavo-henrique-a4aa762b1_videopitch-algatech-activity-7265944145171472384-1B6e?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsWLVoB8GcNpElM93jRzecehyM0KocCwPE" target="_blank" className="saiba_mais">{t.saiba_mais}</Link></p></fieldset>
                 </div>
             </Projeto>
         </ProjetosContainer>
