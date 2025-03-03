@@ -110,6 +110,23 @@ const Projeto = styled.div`
 `;
 
 const ProjetosSection = () => {
+
+    /* 
+    
+    Para adicionar um novo projeto a sessão siga as seguintes etapas:
+
+
+        1. importe da pasta assets as imagens a serem utilizadas do projeto para esse componente.
+        2. crie uma lista com essas imagens importadas.
+        3. crie um useState para definir a imagem atual do projeto adicionado
+        4. copie um componente Projeto e cole-o logo abaixo do ultimo projeto adicionado e altere as variaveis de acordo
+        5. crie um useEffect seguindo o mesmo padrão dos outros projetos, porém com variaveis modificadas.
+        6. troque textos e links
+    
+    
+    
+    
+    */
     const imagensAlgaTech = [ImgAlgaTech1, ImgAlgaTech2, ImgAlgaTech3];
     const [imagemAlgaTech, setImagemAlgaTech] = useState(0);
     const imagens = [ImgVigilRace1, ImgVigilRace2, ImgVigilRace3];

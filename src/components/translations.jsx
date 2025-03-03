@@ -1,3 +1,17 @@
+
+/* 
+    para traduzir um texto:
+    
+    1. crie uma nova key com o mesmo nome no objeto pt para portugues e en para ingles para o que quer traduzir.
+    2. adicione o texto em portugues na key nova criada no pt
+    3. adicione a key criada no en o mesmo texto porém em sua forma traduzida para o inglês
+    4. use {t.<nome da chave>} no lugar do texto do componente
+
+
+*/
+
+
+
 const translations = {
     pt:{
         projects: "Projetos",

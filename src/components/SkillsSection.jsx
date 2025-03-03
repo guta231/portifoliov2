@@ -56,6 +56,16 @@ img{
 
 const SkillsSection = () => {
 
+    /* 
+    
+        Para adicionar um novo icone de skill:
+
+        1. importe o icone da pasta assets.
+        2. crie uma tag <img/> nova com a imagem importada
+    
+    
+    */
+
 
     const {ref, inView} = useInView({
         

@@ -64,6 +64,16 @@ img:hover{
 
 const ContatosSection = () => {
 
+
+    /* 
+        Para adicionar um novo contato:
+
+
+        1. importe o icone da rede/contato da pasta assets
+        2. crie uma nova tag dentro da tag <p> com a seguinte estrutura: <Link to="<url do contato>" target="_blank"><img src={<imagem importada>} alt="<descrição do icone>"/><Link/>
+    
+    */
+
     const {ref, inView} = useInView({
 
         triggerOnce: true,
