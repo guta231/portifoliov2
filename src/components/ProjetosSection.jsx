@@ -17,7 +17,7 @@ const Projeto = styled.div`
     display: flex;
     justify-content: center;
     gap: 10vw;
-    margin-top: 15vh;
+    margin-top: 20vh;
     transition: opacity 1s ease-in-out;
 
     &.in-view {
@@ -64,8 +64,8 @@ const Projeto = styled.div`
         width: 35vw;
     }
     p{
-        margin-top: 2vh;
-        margin-bottom: 2vh;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
         font-family: "Jura", serif;
     }
 

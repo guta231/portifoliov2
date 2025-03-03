@@ -54,7 +54,7 @@ const AboutSection = styled.section`
         border-radius: 3%;
         background-color: #05051d3b;
     p{
-        margin: 10px;
+        margin: 5vh;
         text-align: center;
         font-family: "Jura", serif;
     }
@@ -69,6 +69,9 @@ const AboutSection = styled.section`
         width: 80%;
         height: 60%;
         margin-left: 10%;
+        p{
+            margin: 1vh;
+        }
     }
     `
 
