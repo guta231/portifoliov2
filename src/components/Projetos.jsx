@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
+import { useLanguage } from "./LanguageContext";
 
 
 const ContentContainer = styled.div`
@@ -38,11 +39,13 @@ const Projetos = () => {
     threshold: 0.5,     // O conteúdo precisa estar 50% visível para ser ativado
   });
 
+  const {t} = useLanguage();
+
   return (
     <ContentContainer>
       <div ref={ref}>
         <Content className={inView ? "in-view" : ""}>
-          <h1>Projetos</h1>
+          <h1>{t.projects}</h1>
         </Content>
       </div>
     </ContentContainer>

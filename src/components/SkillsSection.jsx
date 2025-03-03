@@ -5,6 +5,9 @@ import NativeReact from "../assets/icons8-nativo-de-reagir.svg";
 import Mysql from "../assets/icons8-mysql.svg";
 import Javascript from "../assets/icons8-javascript.svg";
 import Arduino from "../assets/icons8-arduino.svg";
+import Node from "../assets/icons8-nodejs.svg";
+import Azure from "../assets/icons8-azure.svg";
+import Linux from "../assets/icons8-linux-50.png";
 
 const SkillsContainer = styled.div`
     height: 50vh;
@@ -63,7 +66,6 @@ const SkillsSection = () => {
         1. importe o icone da pasta assets.
         2. crie uma tag <img/> nova com a imagem importada
     
-    
     */
 
 
@@ -83,6 +85,9 @@ const SkillsSection = () => {
                         <img src={Mysql} alt="Icone github" />
                         <img src={Javascript} alt="Icone Whatsapp" />
                         <img src={Arduino} alt="Icone arduino" />
+                        <img src={Node} alt="Icone nodejs" />
+                        <img src={Azure} alt="Icone azure" />
+                        <img src={Linux} alt="Icone linux" />
                     </p>
                 </SkillsContent>
             </fieldset>
