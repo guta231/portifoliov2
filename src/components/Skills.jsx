@@ -6,7 +6,7 @@ const SkillContainer = styled.div`
     justify-content: center;
     margin-top: 30vh;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity .7s ease-in-out;
 
 &.in-view{
     opacity: 1;

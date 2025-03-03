@@ -14,7 +14,7 @@ const Content = styled.div`
     font-size: 1.8rem;
     border-right: solid 5px #f2f2f2be;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity .7s ease-in-out;
     overflow: hidden;
     white-space: nowrap;
     animation: mark .8s step-end infinite;

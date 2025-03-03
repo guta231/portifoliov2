@@ -13,7 +13,7 @@ const ContatosContainer = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 1s ease-in-out;
+    transition: opacity .7s ease-in-out;
 
 fieldset{
     background-color: #05051d3b;

@@ -15,7 +15,7 @@ const ContentContainer = styled.div`
 const Content = styled.div`
   opacity: 0;
   color: #bdd4f7;
-  transition: opacity 1s ease-in-out;
+  transition: opacity .7s ease-in-out;
   border-right: solid 5px #ffffffbe;
   animation: mark .8s step-end infinite;
   overflow: hidden;

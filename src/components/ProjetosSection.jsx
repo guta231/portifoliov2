@@ -18,7 +18,7 @@ const Projeto = styled.div`
     justify-content: center;
     gap: 10vw;
     margin-top: 20vh;
-    transition: opacity 1s ease-in-out;
+    transition: opacity .7s ease-in-out;
 
     &.in-view {
         opacity: 1;
