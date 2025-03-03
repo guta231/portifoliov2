@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Link} from "react-scroll";
+import { useLanguage } from "./LanguageContext";
 
 const Nav = styled.nav`
     position: fixed;
@@ -40,7 +41,7 @@ const Nav = styled.nav`
 
 const Navbar = () => {
 
-
+    const { t } = useLanguage();
     
 
 
@@ -48,10 +49,10 @@ const Navbar = () => {
         <Nav>
             <div>
                 <ul>
-                    <li><Link className="link" to="projetos" smooth="true" duration={500}>Projetos</Link></li>
-                    <li><Link className="link" to="contatos" smooth="true" duration={500}>Contatos</Link></li>
-                    <li><Link className="link" to="skills" smooth="true" duration={500}>Habilidades</Link></li>
-                    <li><Link className="link" to="about" smooth="true" duration={500}>Sobre</Link></li>
+                    <li><Link className="link" to="projetos" smooth="true" duration={500}>{t.projects}</Link></li>
+                    <li><Link className="link" to="contatos" smooth="true" duration={500}>{t.contacts}</Link></li>
+                    <li><Link className="link" to="skills" smooth="true" duration={500}>{t.skills}</Link></li>
+                    <li><Link className="link" to="about" smooth="true" duration={500}>{t.about}</Link></li>
                 </ul>
             </div>
         </Nav>

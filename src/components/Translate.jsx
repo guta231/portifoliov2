@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import styled from "styled-components";
-import Flag from 'react-world-flags';
+import Flag from "react-world-flags";
+import { useLanguage } from "./LanguageContext";
 
-// Criação do componente com o uso de props transitórias
 const TranslateContainer = styled.div`
     display: flex;
     position: fixed;
@@ -30,7 +30,7 @@ const Dropdown = styled.div`
     right: 10px;
     z-index: 1001;
     width: 120px;
-    display: ${({ $show }) => ($show ? 'block' : 'none')}; /* Usando prop transitória $show */
+    display: ${({ $show }) => ($show ? "block" : "none")};
 `;
 
 const Option = styled.div`
@@ -46,33 +46,32 @@ const Option = styled.div`
 
 const Translate = () => {
     const [showDropdown, setShowDropdown] = useState(false);
-    const [selectedLanguage, setSelectedLanguage] = useState('Português');
+    const { language, toggleLanguage } = useLanguage();
 
     const toggleDropdown = () => setShowDropdown(!showDropdown);
-    const handleSelect = (language, code) => {
-        setSelectedLanguage(language);
+    const handleSelect = (lang) => {
+        toggleLanguage(lang);
         setShowDropdown(false);
     };
 
     return (
         <TranslateContainer>
             <CustomSelect onClick={toggleDropdown}>
-                <Flag code={selectedLanguage === 'Português' ? 'BR' : 'US'} style={{ width: 20, marginRight: 8 }} />
-                {selectedLanguage}
+                <Flag code={language === "pt" ? "BR" : "US"} style={{ width: 20, marginRight: 8 }} />
+                {language === "pt" ? "Português" : "English"}
             </CustomSelect>
-            {/* Usando $show para evitar passar a prop show para o DOM */}
             <Dropdown $show={showDropdown}>
-                <Option onClick={() => handleSelect('Português', 'BR')}>
+                <Option onClick={() => handleSelect("pt")}>
                     <Flag code="BR" style={{ width: 20, marginRight: 8 }} />
                     Português
                 </Option>
-                <Option onClick={() => handleSelect('English', 'US')}>
+                <Option onClick={() => handleSelect("en")}>
                     <Flag code="US" style={{ width: 20, marginRight: 8 }} />
                     English
                 </Option>
             </Dropdown>
         </TranslateContainer>
     );
-}
+};
 
 export default Translate;

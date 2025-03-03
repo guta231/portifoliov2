@@ -8,6 +8,7 @@ import Contatos from "./components/Contatos";
 import ContatosSection from "./components/ContatosSection";
 import Skills from "./components/Skills";
 import SkillsSection from "./components/SkillsSection";
+import { LanguageProvider } from "./components/LanguageContext";
 
 import "./components/Fonts.css";
 
@@ -17,16 +18,18 @@ function App() {
 
   return (
     <>
-      <Navbar/>
-      <Hello/>
-      <About/>
-      <Translate/>
-      <Projetos/>
-      <ProjetosSection/>
-      <Skills/>
-      <SkillsSection/>
-      <Contatos/>
-      <ContatosSection/>
+      <LanguageProvider>
+        <Navbar/>
+        <Hello/>
+        <About/>
+        <Translate/>
+        <Projetos/>
+        <ProjetosSection/>
+        <Skills/>
+        <SkillsSection/>
+        <Contatos/>
+        <ContatosSection/>
+      </LanguageProvider>
     </>
   )
 }

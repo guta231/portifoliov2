@@ -7,6 +7,8 @@ import ImgVigilRace3 from "../assets/imagem_VigilRace3.jpg";
 import ImgAlgaTech1 from "../assets/imagem_AlgaTech1.jpeg";
 import ImgAlgaTech2 from "../assets/imagem_AlgaTech2.jpeg";
 import ImgAlgaTech3 from "../assets/imagem_AlgaTech3.jpeg";
+import { useLanguage } from "./LanguageContext";
+import {Link} from "react-router-dom";
 
 const ProjetosContainer = styled.section`
     padding: 10px;
@@ -75,6 +77,11 @@ const Projeto = styled.div`
         text-align: center;
         font-family: "Jura", serif;
     }
+    .saiba_mais{
+        font-size: 20px;
+        font-family: "Inter", serif;
+        color: #4169E1;
+    }
 
     @media (max-width: 1283px) {
         .container {
@@ -107,6 +114,8 @@ const ProjetosSection = () => {
     const [imagemAtual, setImagemAtual] = useState(0);
     const [fade, setFade] = useState(true);
     const [fadeAlgaTech, setFadeAlgaTech] = useState(true);
+
+    const {t} = useLanguage();
 
     useEffect(() => {
         const trocaImagem = () => {
@@ -154,10 +163,7 @@ const ProjetosSection = () => {
                         ))}
                     </div>
                     <h1>VigilRace</h1>
-                    <fieldset><p>Finalista na competição NEXT da FIAP 2024, ficando entre os 6 melhores de quase 100 grupos, com o projeto Vigil Race, desenvolvido para a Tech Mahindra. O objetivo foi criar uma plataforma inovadora para popularizar a Fórmula E, integrando gamificação, IoT e engajamento social. <br/><br/>1. IoT e Monitoramento em Tempo Real
-2. Desenvolvimento de Software e Protótipos
-3. Estratégias de Gamificação e Engajamento
-4. Trabalho em Equipe e Solução de Problemas</p></fieldset>
+                    <fieldset><p>{t.vigilrace_p1}<br/><br/>{t.vigilrace_p2}<br/><br/><Link to="https://www.linkedin.com/posts/milena-garcia-605931256_meu-grupo-e-eu-tivemos-a-oportunidade-de-ugcPost-7258565795226525696-f2ZM?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsWLVoB8GcNpElM93jRzecehyM0KocCwPE" target="_blank" className="saiba_mais">{t.saiba_mais}</Link></p></fieldset>
                 </div>
             </Projeto>
             <Projeto ref={ref} className={inView ? "in-view" : ""}>
@@ -175,7 +181,7 @@ const ProjetosSection = () => {
                     <h1>AlgaTech</h1>
                     <fieldset><p>Projeto desenvolvido para a Global Solution - 2º semestre de 2024, com o tema "Green Energy - energia limpa para um futuro mais sustentável", em parceria com empresas como SAP, Ultragaz e Pacto Global.<br/><br/>Geração de energia solar: para garantir a autossustentabilidade do sistema;
 IoT (Internet of Things): para comunicação e monitoramento das microalgas;
-Eletrofloculação: para otimizar o processo de coleta das algas.</p></fieldset>
+Eletrofloculação: para otimizar o processo de coleta das algas.<br/><br/><Link to="https://www.linkedin.com/posts/gustavo-henrique-a4aa762b1_videopitch-algatech-activity-7265944145171472384-1B6e?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsWLVoB8GcNpElM93jRzecehyM0KocCwPE" target="_blank" className="saiba_mais">Saiba mais</Link></p></fieldset>
                 </div>
             </Projeto>
         </ProjetosContainer>

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import perfil from "../assets/87510192_sem_fundo.png";
+import {useLanguage} from "./LanguageContext"
 
 const AboutSection = styled.section`
         display: flex;
@@ -45,7 +46,6 @@ const AboutSection = styled.section`
 
     const Fieldset = styled.fieldset`
         color: #f2f2f2;
-        height: 35vh;
         width: 50vw;
         scale: 90%;
         border: none;
@@ -59,7 +59,7 @@ const AboutSection = styled.section`
         font-family: "Jura", serif;
     }
     div{
-        margin-top: 2vh;
+        margin: 2vh;
         display: flex;
         justify-content: center;
         font-family: "Cormorant Garamond", serif;
@@ -67,7 +67,7 @@ const AboutSection = styled.section`
 
     @media (max-width: 1283px){
         width: 80%;
-        height: 60%;
+        height: auto;
         margin-left: 10%;
         p{
             margin: 1vh;
@@ -77,7 +77,7 @@ const AboutSection = styled.section`
 
 const About = () => {
 
-
+    const {t} = useLanguage();
     
 
 
@@ -88,7 +88,7 @@ const About = () => {
             
             <div className="perfil">
                 <Img src={perfil}/>
-                <Fieldset><p>Estudante de Engenharia de Software na FIAP - Faculdade de Informática e Administração Paulista, com amplos conhecimentos gerais em tecnologia e um compromisso contínuo com a aprendizagem. Possuo grande interesse em Engenharia de Dados. Sou flexível e versátil, capaz de me adaptar a diferentes áreas, e tenho uma grande sede por conhecimento.</p><div>“Eu não sou um programador, sou um solucionador de problemas que usa código."</div><div>~Scott Hanselman</div></Fieldset>
+                <Fieldset><p>{t.about_text}</p><div>{t.about_frase}</div><div>~Scott Hanselman</div></Fieldset>
             </div>
         </AboutSection>
             
