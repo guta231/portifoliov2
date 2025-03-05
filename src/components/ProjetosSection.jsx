@@ -80,7 +80,20 @@ const Projeto = styled.div`
     .saiba_mais{
         font-size: 20px;
         font-family: "Inter", serif;
-        color: #4169E1;
+        text-decoration: none;
+        color: #7982f5;
+        border: none;
+        border-right: 5px solid;
+        animation: mark_saiba_mais .8s ease-in-out infinite;
+        
+    }
+    .saiba_mais:hover{
+        color: #a7a6a6;
+    }
+    @keyframes mark_saiba_mais{
+        50%{
+            border-right-color: transparent;
+        }
     }
 
     @media (max-width: 1283px) {
