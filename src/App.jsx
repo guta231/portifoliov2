@@ -9,8 +9,11 @@ import ContatosSection from "./components/ContatosSection";
 import Skills from "./components/Skills";
 import SkillsSection from "./components/SkillsSection";
 import { LanguageProvider } from "./components/LanguageContext";
+import Footer from "./components/Footer";
+
 
 import "./components/Fonts.css";
+
 
 
 function App() {
@@ -29,6 +32,7 @@ function App() {
         <SkillsSection/>
         <Contatos/>
         <ContatosSection/>
+        <Footer/>
       </LanguageProvider>
     </>
   )

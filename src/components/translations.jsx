@@ -25,6 +25,7 @@ const translations = {
         algatech_p1: 'Projeto desenvolvido para a Global Solution - 2º semestre de 2024, com o tema "Green Energy - energia limpa para um futuro mais sustentável", em parceria com empresas como SAP, Ultragaz e Pacto Global."',
         algatech_p2: "Geração de energia solar: para garantir a autossustentabilidade do sistema; IoT (Internet of Things): para comunicação e monitoramento das microalgas; Eletrofloculação: para otimizar o processo de coleta das algas.",
         saiba_mais: "Saiba mais",
+        footer: "© 2025 Gustavo Henrique. Todos os direitos reservados.",
     },
     en:{
         projects: "Projects",
@@ -38,6 +39,7 @@ const translations = {
         algatech_p1: 'Project developed for the Global Solution - 2nd half of 2024, with the theme "Green Energy - clean energy for a more sustainable future", in partnership with companies such as SAP, Ultragaz and Global Compact."',
         algatech_p2: "Solar energy generation: to ensure the self-sustainability of the system; IoT (Internet of Things): for communication and monitoring of microalgae; Electroflocculation: to optimize the process of collecting algae.",
         saiba_mais: "Learn more",
+        footer: "© 2025 Gustavo Henrique. All rights reserved.",
     },
 };
 
