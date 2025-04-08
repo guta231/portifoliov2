@@ -6,7 +6,7 @@ import {useLanguage} from "./LanguageContext";
 const FooterContainer = styled.footer`
 
     background-color: #000;
-    color: #bdd4f7;
+    color: #fff;
     display: flex;
     justify-content: center;
     height: 10vh;
