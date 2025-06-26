@@ -8,6 +8,7 @@ import Arduino from "../assets/icons8-arduino.svg";
 import Node from "../assets/icons8-nodejs.svg";
 import Azure from "../assets/icons8-azure.svg";
 import Linux from "../assets/icons8-linux-50.png";
+import {useLanguage} from "./LanguageContext";
 
 const SkillsContainer = styled.div`
     height: 50vh;
@@ -19,6 +20,9 @@ const SkillsContainer = styled.div`
     
 fieldset{
     background-color: #05051d3b;
+    color: white;
+    text-align: center;
+    font-size: 24px;
     width: 90%;
     border: none;
     border-top: solid 2px #f2f2f2;
@@ -75,6 +79,7 @@ const SkillsSection = () => {
         threshold: 0.5,
     })
 
+    const {t} = useLanguage();
     return(
         <SkillsContainer ref={ref} className={inView ? "in-view" : ""}>
             <fieldset>
@@ -90,7 +95,9 @@ const SkillsSection = () => {
                         <img src={Linux} alt="Icone linux" />
                     </p>
                 </SkillsContent>
+                <p>{t.certifications}<a href="https://cursos.alura.com.br/user/gustavoho2005/fullCertificate/26ad57c8bb2efb9877606ffb21c0d61b">Alura</a> | <a href=""> FIAP</a></p>
             </fieldset>
+            
         
         </SkillsContainer>
     )
