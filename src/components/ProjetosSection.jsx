@@ -12,6 +12,7 @@ import {Link} from "react-router-dom";
 
 const ProjetosContainer = styled.section`
     padding: 10px;
+    z-index: 1;
 `;
 
 const Projeto = styled.div`
@@ -195,7 +196,7 @@ const ProjetosSection = () => {
                         ))}
                     </div>
                     <h1>VigilRace</h1>
-                    <fieldset><p>{t.vigilrace_p1}<br/><br/>{t.vigilrace_p2}<br/><br/><Link to="https://www.linkedin.com/posts/milena-garcia-605931256_meu-grupo-e-eu-tivemos-a-oportunidade-de-ugcPost-7258565795226525696-f2ZM?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsWLVoB8GcNpElM93jRzecehyM0KocCwPE" target="_blank" className="saiba_mais">{t.saiba_mais}</Link></p></fieldset>
+                    <fieldset><p>{t.vigilrace_p1}<br/><br/>{t.vigilrace_p2}<br/><br/><Link to="https://www.linkedin.com/posts/milena-garcia-605931256_meu-grupo-e-eu-tivemos-a-oportunidade-de-ugcPost-7258565795226525696-f2ZM?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsWLVoB8GcNpElM93jRzecehyM0KocCwPE" target="_blank" className="saiba_mais cursor-target">{t.saiba_mais}</Link></p></fieldset>
                 </div>
             </Projeto>
             <Projeto ref={ref} className={inView ? "in-view" : ""}>
@@ -211,7 +212,7 @@ const ProjetosSection = () => {
                         ))}
                     </div>
                     <h1>AlgaTech</h1>
-                    <fieldset><p>{t.algatech_p1}<br/><br/>{t.algatech_p2}<br/><br/><Link to="https://www.linkedin.com/posts/gustavo-henrique-a4aa762b1_videopitch-algatech-activity-7265944145171472384-1B6e?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsWLVoB8GcNpElM93jRzecehyM0KocCwPE" target="_blank" className="saiba_mais">{t.saiba_mais}</Link></p></fieldset>
+                    <fieldset><p>{t.algatech_p1}<br/><br/>{t.algatech_p2}<br/><br/><Link to="https://www.linkedin.com/posts/gustavo-henrique-a4aa762b1_videopitch-algatech-activity-7265944145171472384-1B6e?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsWLVoB8GcNpElM93jRzecehyM0KocCwPE" target="_blank" className="saiba_mais cursor-target">{t.saiba_mais}</Link></p></fieldset>
                 </div>
             </Projeto>
         </ProjetosContainer>

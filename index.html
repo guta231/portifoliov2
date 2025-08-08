@@ -2,96 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./global.css" />
     <title>Gustavo</title>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background-color: #0d1117;
-        overflow-x: hidden;
-      }
-      #particles-js {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: -1;
-      }
-      #root {
-        position: relative;
-        z-index: 1;
-        min-height: 200vh;
-      }
-    </style>
   </head>
   <body>
-    <div id="particles-js"></div>
     <div id="root"></div>
-    <script>
-      particlesJS("particles-js", {
-        "particles": {
-          "number": {
-            "value": 80,
-            "density": {
-              "enable": true,
-              "value_area": 800
-            }
-          },
-          "color": { "value": "#A9A9A9" },
-          "shape": {
-            "type": "circle"
-          },
-          "opacity": {
-            "value": 1,
-            "random": false,
-            "anim": { "enable": false }
-          },
-          "size": {
-            "value": 3,
-            "random": true
-          },
-          "line_linked": {
-            "enable": true,
-            "color": "#D3D3D3",
-            "size": 15
-          },
-          "move": {
-            "enable": true,
-            "speed": 0.4,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out"
-          }
-        },
-        "interactivity": {
-          "detect_on": "window",
-          "events": {
-            "onhover": {
-              "enable": false
-            
-            },
-            "onclick": {
-              "enable": true,
-              "mode": "repulse"
-            }
-          },
-          "modes": {
-            "push": {
-              "particles_nb": 4
-            }
-          }
-        }
-      });
-    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

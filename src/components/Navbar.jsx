@@ -6,13 +6,12 @@ const Nav = styled.nav`
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #0d1117; 
     color: #f2f2f2;
     display: flex;
     height: 10vh;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 1;
 
     ul {
         display: flex;
@@ -25,11 +24,14 @@ const Nav = styled.nav`
         text-decoration: none;
         font-size: 20px;
         font-family: "Inter", serif;
+        transition: background 0.3s, color 0.3s;
+        border-radius: 8px;
+        padding: 6px 18px;
     }
 
-    .link:hover {
-        color: #c9c6c6;
-        cursor: pointer;
+    .link.active {
+        background: rgba(255, 255, 255, 0.25);
+        color: #fff;
     }
 
     @media (max-width: 1283px){
@@ -49,10 +51,10 @@ const Navbar = () => {
         <Nav>
             <div>
                 <ul>
-                    <li><Link className="link" to="projetos" smooth="true" duration={500}>{t.projects}</Link></li>
-                    <li><Link className="link" to="contatos" smooth="true" duration={500}>{t.contacts}</Link></li>
-                    <li><Link className="link" to="skills" smooth="true" duration={500}>{t.skills}</Link></li>
-                    <li><Link className="link" to="about" smooth="true" duration={500}>{t.about}</Link></li>
+                    <li><Link className="link cursor-target" activeClass="active" to="projetos" spy={true} smooth={true} duration={500}>{t.projects}</Link></li>
+                    <li><Link className="link cursor-target" activeClass="active" to="contatos" spy={true} smooth={true} duration={500}>{t.contacts}</Link></li>
+                    <li><Link className="link cursor-target" activeClass="active" to="skills" spy={true} smooth={true} duration={500}>{t.skills}</Link></li>
+                    <li><Link className="link cursor-target" activeClass="active" to="about" spy={true} smooth={true} duration={500}>{t.about}</Link></li>
                 </ul>
             </div>
         </Nav>

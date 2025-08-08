@@ -11,14 +11,13 @@ const ContentContainer = styled.div`
   justify-content: center;
   font-size: 2rem;
   font-family: "Jura", serif;
+  z-index: 1;
 `;
 
 const Content = styled.div`
   opacity: 0;
-  color: #bdd4f7;
+  color: #ffffff;
   transition: opacity .7s ease-in-out;
-  border-right: solid 5px #ffffffbe;
-  animation: mark .8s step-end infinite;
   overflow: hidden;
   white-space: nowrap;
 
@@ -26,11 +25,7 @@ const Content = styled.div`
     opacity: 1;
   }
 
-  @keyframes mark{
-    50%{
-        border-right-color: transparent;
-    }
-  }
+  
 `;
 
 const Projetos = () => {

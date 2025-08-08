@@ -10,30 +10,45 @@ import Skills from "./components/Skills";
 import SkillsSection from "./components/SkillsSection";
 import { LanguageProvider } from "./components/LanguageContext";
 import Footer from "./components/Footer";
-
+import TargetCursor from "./components/TargetCursor";
+import DarkVeil from "./components/DarkVeil";
 
 import "./components/Fonts.css";
 
-
-
 function App() {
-  
-
   return (
     <>
-      <LanguageProvider>
-        <Navbar/>
-        <Hello/>
-        <About/>
-        <Translate/>
-        <Projetos/>
-        <ProjetosSection/>
-        <Skills/>
-        <SkillsSection/>
-        <Contatos/>
-        <ContatosSection/>
-        <Footer/>
-      </LanguageProvider>
+      {/* DarkVeil como plano de fundo fixo */}
+      <div
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          zIndex: 0,
+          pointerEvents: 'none'
+        }}
+      >
+        <DarkVeil />
+      </div>
+      {/* Conteúdo principal acima do background */}
+      <div style={{ width: '100vw', minHeight: '100vh', position: 'relative', zIndex: 1 }}>
+        <TargetCursor spinDuration={4} hideDefaultCursor={true} />
+        <LanguageProvider>
+          <Navbar />
+          <Hello />
+          <About />
+          <Translate />
+          <Projetos />
+          <ProjetosSection />
+          <Skills />
+          <SkillsSection />
+          <Contatos />
+          <ContatosSection />
+          <Footer />
+        </LanguageProvider>
+      </div>
     </>
   )
 }

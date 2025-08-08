@@ -11,13 +11,13 @@ import Linux from "../assets/icons8-linux-50.png";
 import {useLanguage} from "./LanguageContext";
 
 const SkillsContainer = styled.div`
-    height: 50vh;
+    min-height: 90vh; /* Garante espaço para o scroll */
     opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: opacity .7s ease-in-out;
-    
+    z-index: 1;
 fieldset{
     background-color: #05051d3b;
     color: white;
@@ -81,7 +81,7 @@ const SkillsSection = () => {
 
     const {t} = useLanguage();
     return(
-        <SkillsContainer ref={ref} className={inView ? "in-view" : ""}>
+        <SkillsContainer ref={ref} className={inView ? "in-view" : ""} id="skills">
             <fieldset>
                 <SkillsContent>
                     <p>
@@ -95,7 +95,7 @@ const SkillsSection = () => {
                         <img src={Linux} alt="Icone linux" />
                     </p>
                 </SkillsContent>
-                <p>{t.certifications}<a href="https://cursos.alura.com.br/user/gustavoho2005/fullCertificate/26ad57c8bb2efb9877606ffb21c0d61b">Alura</a> | <a href=""> FIAP</a></p>
+                <p>{t.certifications}<a className="cursor-target" href="https://cursos.alura.com.br/user/gustavoho2005/fullCertificate/26ad57c8bb2efb9877606ffb21c0d61b">Alura</a> | <a className="cursor-target" href=""> FIAP</a></p>
             </fieldset>
             
         

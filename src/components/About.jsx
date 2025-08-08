@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import perfil from "../assets/87510192_sem_fundo.png";
-import {useLanguage} from "./LanguageContext"
+import {useLanguage} from "./LanguageContext";
 
 const AboutSection = styled.section`
         display: flex;
-        
+        z-index: 1;
         justify-content: center;
-        height: 70vh;
+        min-height: 50vh; /* Garante espaço para o scroll */
+        margin-top: 5vh;
     .perfil{
         display: flex;
         align-items: center;
@@ -83,12 +84,14 @@ const About = () => {
 
 
     return(
-
         <AboutSection>
-            
             <div className="perfil">
                 <Img src={perfil}/>
-                <Fieldset><p>{t.about_text}</p><div>{t.about_frase}</div><div>~Scott Hanselman</div></Fieldset>
+                <Fieldset>
+                    <p>{t.about_text}</p>
+                    <div>{t.about_frase}</div>
+                    <div>~Scott Hanselman</div>
+                </Fieldset>
             </div>
         </AboutSection>
             

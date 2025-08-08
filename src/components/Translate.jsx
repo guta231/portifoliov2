@@ -6,7 +6,7 @@ import { useLanguage } from "./LanguageContext";
 const TranslateContainer = styled.div`
     display: flex;
     position: fixed;
-    z-index: 1000;
+    z-index: 1;
     justify-content: right;
     width: 100%;
     bottom: 10vh;

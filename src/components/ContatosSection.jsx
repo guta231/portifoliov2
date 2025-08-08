@@ -4,11 +4,10 @@ import Linkedin from "../assets/icons8-linkedin.svg";
 import Gmail from "../assets/icons8-gmail.svg";
 import Github from "../assets/icons8-github.svg";
 import Whatsapp from "../assets/icons8-whatsapp.svg";
-import {Link} from "react-router-dom";
+
 
 const ContatosContainer = styled.section`
-
-    height: 50vh;
+    min-height: 90vh; /* Garante espaço para o scroll */
     opacity: 0;
     display: flex;
     justify-content: center;
@@ -77,21 +76,29 @@ const ContatosSection = () => {
     const {ref, inView} = useInView({
 
         triggerOnce: true,
-        threshold: 0.5,
+        threshold: 0, // ou 0
 
     })
 
 
     return(
         
-            <ContatosContainer ref={ref} className={inView ? "in-view" : ""}>
+            <ContatosContainer ref={ref} className={inView ? "in-view" : ""} id="contatos">
                 <fieldset>
                     <ImagensContainer>
                         <p>
-                            <Link to="https://www.linkedin.com/in/gustavo-henrique-a4aa762b1/" target="_blank"><img src={Linkedin} alt="Icone linkedin"/></Link>
-                            <Link to="mailto:gustavoho2005@gmail.com" target="_blank"><img src={Gmail} alt="Icone gmail"/></Link>
-                            <Link to="https://github.com/guta231" target="_blank"><img src={Github} alt="Icone github" /></Link>
-                            <Link to="https://wa.me/5511972960449" target="_blank"><img src={Whatsapp} alt="Icone Whatsapp" /></Link>
+                            <a href="https://www.linkedin.com/in/gustavo-henrique-a4aa762b1/" target="_blank" rel="noopener noreferrer">
+                                <img src={Linkedin} className="cursor-target" alt="Icone linkedin"/>
+                            </a>
+                            <a href="mailto:gustavoho2005@gmail.com" target="_blank" rel="noopener noreferrer">
+                                <img src={Gmail} className="cursor-target" alt="Icone gmail"/>
+                            </a>
+                            <a href="https://github.com/guta231" target="_blank" rel="noopener noreferrer">
+                                <img src={Github} className="cursor-target" alt="Icone github" />
+                            </a>
+                            <a href="https://wa.me/5511972960449" target="_blank" rel="noopener noreferrer">
+                                <img src={Whatsapp} className="cursor-target" alt="Icone Whatsapp" />
+                            </a>
                         </p>
                     </ImagensContainer>
                 </fieldset>

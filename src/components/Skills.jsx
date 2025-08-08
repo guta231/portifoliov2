@@ -16,17 +16,10 @@ const SkillContainer = styled.div`
 `
 const ContentSkill = styled.div`
 
-    color: #bdd4f7;
+    color: #ffffff;
     font-size: 1.5rem;
     font-family: "Jura", serif;
-    border-right: solid 5px #f2f2f2de;
-    animation: mark .8s step-end infinite;
 
-@keyframes mark{
-    50%{
-        border-right-color: transparent;
-    }
-}
 `
 
 
@@ -41,7 +34,7 @@ const Skills = () => {
     const {t} = useLanguage();
 
     return(
-        <SkillContainer id="skills" ref={ref} className={inView ? "in-view" : ""}>
+        <SkillContainer ref={ref} className={inView ? "in-view" : ""}>
             <ContentSkill>
                 <h1>{t.skills}</h1>
             </ContentSkill>
